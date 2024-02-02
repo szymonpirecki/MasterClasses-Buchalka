@@ -4,19 +4,16 @@ import java.util.Scanner;
 
 public class MinMaxChallenge {
     public static void main(String[] args) {
-        var min = Integer.MAX_VALUE;
         var max = Integer.MIN_VALUE;
-
-        while (true){
+        var counter = 0;
+        do {
             var number = getUserNumber();
-            if (number < min)
-                min = number;
-            if (number > max)
+            if (number > max) {
                 max = number;
-
-            System.out.println("MAX: " + max);
-            System.out.println("MIN: " + min);
-        }
+            }
+            counter++;
+        } while (counter != 4);
+        System.out.println("MAX: " + max);
     }
 
     private static int getUserNumber() {
